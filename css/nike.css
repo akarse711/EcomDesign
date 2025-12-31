@@ -1,0 +1,379 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(252, 244, 244);
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  color: white;
+}
+
+.logo {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 10px;
+  top: 0;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;           
+  gap: 70px;              
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.nav a:hover {
+  color: rgb(90, 84, 84);
+  border-bottom: 2px solid rgb(133, 127, 127);
+}
+.brands-menu {
+  position: relative;
+}
+
+
+.brands-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 10px 0;
+  min-width: 180px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 100;
+}
+
+
+.brands-menu:hover .brands-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
+.brands-dropdown li {
+  list-style: none;
+}
+
+.brands-dropdown li a {
+  display: block;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
+}
+
+
+.brands-dropdown a.nike:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.brands-dropdown a.adidas:hover {
+  background-color: #1d8ef1;
+  color: #fff;
+}
+
+.brands-dropdown a.puma:hover {
+  background-color: #e00034;
+  color: #fff;
+}
+
+.hamburger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  width: 30px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 4px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.join-us-menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: rgb(157, 11, 11);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.join-us-menu.open {
+  right: 0;
+}
+
+.join-us-menu a {
+  padding: 15px 25px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  border-bottom: 1px solid #444;
+  transition: background 0.2s;
+}
+
+.join-us-menu a:hover {
+  background-color: white;
+}
+
+
+.vertical-gallery {
+  padding: 60px 30px;
+  max-width: 1000px;
+  margin: auto;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.gallery-title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 40px;
+  color: #111;
+}
+
+.shoe-row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 50px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shoe-row:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.shoe-row img {
+  width: 250px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.shoe-info h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.shoe-info p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3; 
+}
+
+.product-info {
+  padding: 16px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.product-description {
+  font-size: 0.9rem;
+  color: #666;
+  flex-grow: 1;
+  margin-bottom: 12px;
+}
+
+.product-color {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #999;
+  margin-bottom: 12px;
+}
+
+.product-price {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #774831;
+}
+
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 20px;
+    margin: 60px 10px;
+  }
+
+  .contact-section h1 {
+    font-size: 28px;
+  }
+
+  .contact-section p {
+    font-size: 16px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .displayArea {
+    position: static;
+    width: 100%;
+    max-height: none;
+    margin-top: 20px;
+  }
+
+  .displayArea .message {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .contact-section {
+    max-width: 90%;
+    padding: 40px 25px;
+    margin: 80px auto;
+  }
+
+  .contact-section h1 {
+    font-size: 32px;
+  }
+
+  .contact-section p {
+    font-size: 17px;
+  }
+
+  .footer-content {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .footer-column {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+
+  .submit-btn {
+    padding: 12px 25px;
+    font-size: 17px;
+  }
+
+  .displayArea {
+    top: auto;
+    position: relative;
+    width: 100%;
+    max-height: none;
+    margin-top: 30px;
+  }
+}

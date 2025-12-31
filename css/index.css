@@ -1,0 +1,671 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(252, 244, 244);
+}
+/* Slider */
+.slider {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  position: relative;
+}
+
+.slide.displaySlide {
+  display: block;
+  animation: fade 1.5s;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+}
+
+.slides img {
+  width: 100%;
+  height: 900px;
+  display: block;
+}
+
+/* Button Slider */
+.slider:hover .next,
+.slider:hover .prev {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.next, .prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  padding: 10px 15px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.next:hover, .prev:hover {
+  background-color: rgb(148, 139, 139);
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+@keyframes fade {
+  from {opacity: .5;}
+  top {opacity: 1;}
+}
+/* Text inside the images */
+.textHeader1 {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  font-weight: bold;
+  color: #774831;
+  font-size: 30px;
+  font-family: 'open sans';
+}
+.textHeader2 {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  font-weight: bold;
+  color: green;
+  font-size: 30px;
+  font-family: 'open sans';
+}
+.textHeader3 {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  font-weight: bold;
+  color: #98C447;
+  font-size: 30px;
+  width: 40%;
+  font-family: 'open sans';
+}
+
+
+
+.textHeader h2 {
+  margin-bottom: 10px;
+}
+
+.textHeader p {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+/* Buttons inside the image */
+.shopNow {
+  position: absolute;
+  background-color: #774831;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  left: 25%;
+  margin-top: 10px;
+  border: none;
+  font-family: 'open sans';
+}
+.shopNow2 {
+  position: absolute;
+  background-color: green; 
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  left: 25%;
+  margin-top: 10px;
+  border: none;
+  font-family: 'open sans';
+}
+.shopNow3 {
+  position: absolute;
+  background-color: #98C447; 
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  left: 25%;
+  margin-top: 10px;
+  border: none;
+  font-family: 'open sans';
+}
+
+.shopNow:hover {
+  background-color: #452b1e;
+  cursor: pointer;
+}
+
+.shopNow2:hover {
+  background-color: rgb(8, 80, 8); 
+  cursor: pointer;
+}
+.shopNow3:hover {
+  background-color: #748b4a; 
+  cursor: pointer;
+}
+
+/* tamanño del logo */
+.logo {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 10px;
+  top: 0;
+}
+
+/* navigation bar */
+.nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  color: black;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;           
+  gap: 70px;              
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+  font-family: 'open sans';
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.nav a:hover {
+  color: rgb(90, 84, 84);
+  border-bottom: 2px solid rgb(133, 127, 127);
+}
+.brands-menu {
+  position: relative;
+}
+
+/* Hidden dropdown by default */
+.brands-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 10px 0;
+  min-width: 180px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 100;
+}
+
+/* Show on hover */
+.brands-menu:hover .brands-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Dropdown items */
+.brands-dropdown li {
+  list-style: none;
+}
+
+.brands-dropdown li a {
+  display: block;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
+  font-family: 'open sans';
+}
+
+/* Brand-specific hover styles */
+.brands-dropdown a.nike:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.brands-dropdown a.adidas:hover {
+  background-color: #1d8ef1;
+  color: #fff;
+}
+
+.brands-dropdown a.puma:hover {
+  background-color: #e00034;
+  color: #fff;
+}
+
+.hamburger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  width: 30px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 4px;
+  width: 100%;
+  background-color: black;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* When active, turn into X */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Slide-in menu */
+.join-us-menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: rgb(157, 11, 11);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.join-us-menu.open {
+  right: 0;
+}
+
+.join-us-menu a {
+  padding: 15px 25px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  border-bottom: 1px solid #444;
+  transition: background 0.2s;
+}
+
+.join-us-menu a:hover {
+  background-color: white;
+}
+
+/* Brands grid */
+
+.firstGrid {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: 
+  ".. title .."
+  "firstBrand secondBrand thirdBrand";
+  gap: 30px;
+  margin: 80px 50px;
+  text-align: center;
+}
+
+.brandsTitle {
+  grid-area: title;
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-family: "open sans", sans-serif;
+}
+
+.firstBrand {
+  grid-area: firstBrand;
+
+}
+.secondBrand {
+  grid-area: secondBrand;
+
+}
+.thirdBrand {
+  grid-area: thirdBrand;
+
+}
+
+.firstGrid img {
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+}
+
+.firstGrid p {
+  margin-top: 20px;
+  font-size: 20px;
+  font-family: "open sans";
+  color: rgb(204, 149, 149);
+  transition: color 0.4s ease;
+  line-height: 1.6;
+}
+
+.nike, .adidas, .puma {
+  text-decoration: none;
+}
+
+.nike p:hover, .adidas p:hover, .puma p:hover {
+  color: black;
+}
+
+/* Parallax */
+
+.parallax {
+  background-image: url("/images/mapa.png");
+  min-height: 700px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  grid-area: parallax;
+}
+.parallax img {
+  filter: brightness(50%);
+}
+.parallaxTxt {
+  font-size: 30px;
+  margin-bottom: 40px;
+  font-family: "open sans", sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  width: 80%;
+  transition: color 0.7s ease;
+}
+
+.parallaxTxt p{
+  margin-bottom: 40px;
+}
+
+.parallaxTxt:hover{
+  cursor: pointer;
+  color: #ff0000;
+}
+.parallaxTitle {
+  margin-top: 200px;
+  font-size: 70px;
+  font-family: "open sans", sans-serif;
+  text-align: center;
+  grid-area: parallaxTitle;
+}
+
+.aboutUs {
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: 
+  ".. titleAu .."
+  "history objective service"
+  "team partners policies";
+  gap: 40px;
+  margin: 50px 170px;
+  text-align: center;
+}
+
+.aboutUs h2 {
+  grid-area: titleAu;
+  font-size: 60px;
+  font-family: "open sans", sans-serif;
+}
+.history {
+  grid-area: history;
+}
+.objective {
+  grid-area: objective;
+}
+.service {
+  grid-area: service;
+}
+.team {
+  grid-area: team;
+}
+.partners {
+  grid-area: partners;
+}
+.policies {
+  grid-area: policies;
+}
+.aboutUs img {
+  height: 170px;
+  width: 50%;
+  border-radius: 50%;
+  margin: 20px 0px;
+}
+.aboutUs p {
+  font-size: 20px;
+  font-family: "open sans";
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.aboutUs li {
+  font-size: 20px;
+  font-family: "open sans";
+  margin-top: 10px;
+}
+
+.site-footer {
+  background-color: #2b0e0e; 
+  color: #f1f1f1;
+  padding: 60px 30px;
+  font-family: 'Open Sans', sans-serif;
+  border-top: 5px solid #550000; 
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.footer-column {
+  flex: 1 1 220px;
+  margin: 10px;
+}
+
+.footer-column h4 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #aa0000;
+  padding-bottom: 8px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #ff8c8c;
+  transform: translateX(5px);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 14px;
+  color: #ccc;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  opacity: 0.8;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+@media (max-width: 400px) {
+
+  .contact-section,
+  .page-container,
+  .displayArea,
+  .site-footer,
+  .footer-content,
+  .footer-column {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 15px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .contact-section {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .footer-column {
+    width: 100%;
+  }
+
+  .displayArea {
+    position: static;
+    margin: 20px auto;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .shoe-grid {
+    grid-template-columns: 1fr !important; 
+    padding: 0;
+  }
+
+  .shoe-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  body {
+    overflow-x: hidden; 
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .contact-section {
+    max-width: 90%;
+    margin: 100px auto 50px;
+    padding: 40px;
+  }
+
+  .contact-section h1 {
+    font-size: 32px;
+  }
+
+  .contact-section p {
+    font-size: 17px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .submit-btn {
+    font-size: 17px;
+    padding: 14px 28px;
+  }
+
+  .displayArea {
+    width: 280px;
+    top: 110px;
+    right: 20px;
+    padding: 18px;
+  }
+
+  .displayArea .message h4 {
+    font-size: 15px;
+  }
+
+  .displayArea .message p {
+    font-size: 13.5px;
+  }
+
+  .footer-column h4 {
+    font-size: 18px;
+  }
+
+  .footer-column ul li a {
+    font-size: 15px;
+  }
+}
+

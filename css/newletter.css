@@ -1,0 +1,157 @@
+.newsletter-section {
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+  font-family: 'Open Sans', sans-serif;
+  border-top: 2px solid #ddd;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;    
+  text-align: center;
+  margin: 0; 
+}
+
+.newsletter-section h2 {
+  color: #774831;
+  margin-bottom: 10px;
+}
+
+.newsletter-section p {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#newsletter-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#newsletter-email {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  width: 300px;
+}
+
+#newsletter-form button {
+  padding: 12px 20px;
+  background-color: #774831;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#newsletter-form button:hover {
+  background-color: #5c3323;
+}
+
+.newsletter-message {
+  margin-top: 20px;
+  color: green;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+@media (max-width: 400px) {
+  .newsletter-section {
+    padding: 30px 15px;
+  }
+
+  #newsletter-form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  #newsletter-email {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  #newsletter-form button {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .newsletter-message {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .contact-section,
+  .page-container,
+  .displayArea {
+    max-width: 90%;
+    padding: 40px 25px;
+    margin: 80px auto;
+  }
+
+  .contact-section h1,
+  .page-container h1 {
+    font-size: 32px;
+  }
+
+  .contact-section p,
+  .desc {
+    font-size: 17px;
+  }
+
+  .shoe-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 0 15px;
+  }
+
+  .shoe-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  
+  .footer-content {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .footer-column {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+
+
+  #newsletter-form {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  #newsletter-email,
+  #newsletter-form button {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .newsletter-message {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .displayArea {
+    top: auto;
+    position: relative;
+    width: 100%;
+    max-height: none;
+    margin-top: 30px;
+  }
+}

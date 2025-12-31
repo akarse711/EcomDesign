@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Press+Start+2P&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <title>Blessed Shop</title>
+</head>
+
+<body>
+  <header>
+    <div class="slider">
+      <div class="slides">
+        <!-- Primera imagen -->
+        <div class="slide">
+          <img src="/images/header1.jpg" alt="Header Shoe">
+          <div class="textHeader1">
+            <h2>Your plug for the heats</h2>
+            <p> Level up your rotation now</p>
+            <button class="shopNow" onclick="window.location.href='nike.html'">Shop Now</button>
+          </div>
+        </div>
+        <!-- Segunda imagen -->
+        <div class="slide">
+          <img src="/images/header2.webp" alt="Header Shoe">
+          <div class="textHeader2">
+            <h2>Three stripes, endless hustle.</h2>
+            <p>Step up your game with the three stripes</p>
+            <p>Where style meets street.</p>
+            <button class="shopNow2" onclick="window.location.href='adidas.html'">Shop Now</button>
+          </div>
+        </div>
+        <!-- Tercera imagen -->
+        <div class="slide">
+          <img src="/images/header3.jpeg" alt="Header Shoe">
+          <div class="textHeader3">
+            <h2>FOREVER. BETTER.</h2>
+            <p>Across our business, we are taking action for people and the planet. And we'll never stop holding
+              ourselves accountable and finding ways to do more.</p>
+            <button class="shopNow3" onclick="window.location.href='puma.html'">Shop Now</button>
+          </div>
+        </div>
+      </div>
+      <button class="prev" id="prev">&#10094</button>
+      <button class="next" id="next">&#10095</button>
+    </div>
+
+    <!-- Barra de navigacion -->
+    <div class="nav">
+      <img src="/images/blackLogo.png" alt="Blessed logo" class="logo">
+      <ul>
+
+        <li class="brands-menu">
+          <a href="#mainGrid">Brands</a>
+          <ul class="brands-dropdown">
+            <li><a href="nike.html" class="nike" target="_blank">Nike</a></li>
+            <li><a href="adidas.html" class="adidas" target="_blank">Adidas</a></li>
+            <li><a href="puma.html" class="puma" target="_blank">Puma</a></li>
+          </ul>
+        </li>
+        <li><a href="#parallax">Shops</a></li>
+        <li><a href="#abtus">About Us</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleJoinUsMenu(this)">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Slide-in Join Us Menu -->
+      <div id="joinUsMenu" class="join-us-menu">
+        <a href="contact.html" target="_blank">Contact Us</a>
+        <a href="collaboration.html" target="_blank">Collaboration</a>
+        <a href="newletter.html" target="_blank">Newsletter</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Brands grid -->
+  <main class="firstGrid" id="mainGrid">
+    <div class="brandsTitle">
+      <h2>BRANDS</h2>
+    </div>
+    <section class="firstBrand">
+      <a href="#" class="nike">
+        <img src="/images/nikelogo.jpg" alt="">
+        <p><span class="bold">Nike</span> is the world’s leading sportswear brand, famous for its innovative designs and
+          the iconic Swoosh logo. Known for blending performance technology with street style, Nike’s shoes are trusted
+          by top athletes and trendsetters alike. The brand’s “Just Do It” spirit inspires millions and keeps it at the
+          forefront of both sports and fashion.</p>
+      </a>
+    </section>
+
+    <section class="secondBrand">
+      <a href="#" class="adidas">
+        <img src="/images/adidaslogo.jpg" alt="">
+        <p><span class="bold">Adidas</span> stands out for its three-stripe logo, cutting-edge comfort, and a legacy
+          rooted in both sports and street culture. Founded in Germany, Adidas is celebrated for classic models like the
+          Superstar and Ultraboost, and for its commitment to sustainability and creative collaborations. The brand
+          appeals to athletes and sneaker lovers who value both style and performance.</p>
+      </a>
+    </section>
+
+    <section class="thirdBrand">
+      <a href="#" class="puma">
+        <img src="/images/pumalogo.png" alt="">
+        <p><span class="bold">Puma</span> combines athletic heritage with bold, modern design, offering shoes that are
+          both stylish and functional. With iconic models like the Suede and RS-X, Puma partners with athletes, artists,
+          and designers to create unique collections. The brand is dedicated to innovation and sustainability, making it
+          a favorite for both sports and everyday wear.</p>
+      </a>
+    </section>
+  </main>
+
+  <h2 class="parallaxTitle" id="parallax">SHOPS</h2>
+  <!-- Parallax -->
+  <main class="parallax">
+    <div class="parallaxTxt">
+      <p>Currently, we operate exclusively as an online store and do not have any physical retail locations. However, we
+        are actively planning to open our first brick-and-mortar store in the near future.</p>
+      <p>We are committed to providing you with the best shopping experience — whether online or in person. Until then,
+        enjoy our full range of products available through our secure and convenient online platform, with fast shipping
+        and dedicated customer support.</p>
+      <p>Thank you for your continued trust and support. We look forward to welcoming you to our physical store soon.
+      </p>
+    </div>
+  </main>
+
+  <main class="aboutUs" id="aboutUs">
+    <h2 id="abtus">ABOUT US</h2>
+    <section class="history">
+      <h3>Our History</h3>
+      <img src="/images/history.jpg" alt="">
+      <p>In 2025, two passionate young entrepreneurs came together with a shared vision: to create a sneaker destination
+        that combines the latest trends with unmatched convenience. What started as a simple idea quickly grew into a
+        thriving online store dedicated to sneaker lovers everywhere. </p>
+    </section>
+
+    <section class="service">
+      <h3>Our Services</h3>
+      <img src="/images/delivery.jpg" alt="">
+      <p>We are a dynamic e-commerce platform specializing in the latest and most sought-after sneakers. From classic
+        kicks to limited-edition releases, we’ve got your feet covered. Our commitment to quick, reliable delivery means
+        you get your hands on your favorite pairs faster than ever — straight to your doorstep, hassle-free.</p>
+    </section>
+
+    <section class="team" id="team">
+      <h3>Our Team</h3>
+      <img src="/images/team.webp" alt="">
+      <p>Behind every great brand is an even greater team. Our crew is a diverse group of sneaker enthusiasts,
+        tech-savvy experts, and customer service champions who work tirelessly to ensure your shopping experience is
+        smooth and enjoyable. We’re united by a passion for sneakers and a commitment to excellence in everything we do.
+      </p>
+    </section>
+
+    <section class="objective">
+      <h3>Our Objective</h3>
+      <img src="/images/objective.webp" alt="">
+      <p>Our goal is simple: to make our clients happy. We believe that every pair of sneakers tells a story, and our
+        mission is to help you express yours. By providing top-quality products, exceptional service, and a seamless
+        shopping experience, we strive to build lasting relationships with our customers based on trust and
+        satisfaction.</p>
+    </section>
+
+    <section class="partners">
+      <h3>Our Partners</h3>
+      <img src="/images/partners.jpg" alt="">
+      <p>We’re proud to collaborate with some of the biggest names in the industry: Nike, Adidas, Puma, UPS, and DHL.
+        These partnerships enable us to offer authentic products and reliable delivery services, ensuring you receive
+        only the best — on time, every time.</p>
+    </section>
+
+    <section class="policies" id="policies">
+      <h3>Our Policies</h3>
+      <img src="/images/policies.jpg" alt="">
+      <h3>Sneaker Care & Return Policies</h3>
+      <ul>
+        <li>All sneakers sold are 100% authentic and sourced directly from our trusted partners.</li>
+        <li>We offer a 30-day return window for unworn sneakers in original condition and packaging.</li>
+        <li>Exchanges and refunds are processed promptly to ensure customer satisfaction.</li>
+        <li>For any issues regarding fit or quality, our dedicated support team is here to assist you.</li>
+        <li>We advise customers to inspect their orders upon delivery and report any damage or discrepancies within 48
+          hours.</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#aboutUs">About Us</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="#team">Careers</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#policies">Returns</a></li>
+          <li><a href="collaboration.html" target="_blank">Collaboration</a></li>
+          <li><a href="contact.html" target="_blank">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/zuck/" target="_blank">Instagram</a></li>
+          <li><a href="https://www.facebook.com/zuck/" target="_blank">Facebook</a></li>
+          <li><a href="https://x.com/finkd?lang=es" target="_blank">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="footer-bottom">&copy; 2025 BLESSED. All rights reserved.</p>
+  </footer>
+  <script src="/scripts/index.js"></script>
+</body>
+
+</html>
